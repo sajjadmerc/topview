@@ -15,7 +15,6 @@ smBkApp.itemsSelected = {};
 
 smBkApp.init = function() {
 	let _this = this;
-
 	loadJSON('data.json',
 		function(data) {
 			_this.products = data.products;
@@ -29,7 +28,6 @@ smBkApp.loadStep = function(step_number) {
 	switch(step_number) {
 		case 1:
 			this.buildProducts();
-
 			document.querySelector('.next').onclick = function() {
 				let valid = false;
 
@@ -49,14 +47,12 @@ smBkApp.loadStep = function(step_number) {
 			break;
 		case 2:
 			this.buildReview();
-
 			document.querySelector('.next-review').onclick = function() {
 				_this.loadStep(3);
 			};
 			break;
 		case 3:
 			document.getElementById('review-total-2').innerHTML = 'Total : $' + this.total;
-
 			document.getElementById('checkout-form').addEventListener("submit", function(evt) {
 		        evt.preventDefault();
 		        _this.loadStep(4);
@@ -72,7 +68,6 @@ smBkApp.loadStep = function(step_number) {
 }
 
 smBkApp.buildReview = function() {
-
 	for (var key in this.itemsSelected) {
 		let _this = this.itemsSelected[key];
 		
@@ -102,7 +97,6 @@ smBkApp.buildReview = function() {
 
 smBkApp.buildProducts = function() {
 	var _this = this;
-
 	this.products.forEach(function(item, index) {
 		let productTemplate = document.querySelector('.product');
 		let cln = productTemplate.cloneNode(true);
