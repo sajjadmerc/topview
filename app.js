@@ -40,7 +40,7 @@ smBkApp.loadStep = function(step_number) {
 				if(valid) {
 					_this.loadStep(2);
 				} else {
-					alert('Select 1 or more bike before proceeding.');
+					alert('Select 1 or more bike(s) before proceeding.');
 				}
 			};
 			break;
