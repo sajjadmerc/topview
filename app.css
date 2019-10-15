@@ -56,39 +56,6 @@ html,body {
 	color: orange;
 }
 
-/*#header .total {
-	color: #f9f9f9;
-	font-weight: 800;
-	position: absolute;
-	right: 5px;
-	top: 10px;
-}
-*/
-
-/* layout > breadcrumb */
-#breadcrumb {
-	background: #eaeaea;
-	padding: 10px 5px;
-}
-
-#breadcrumb > * {
-	display: inline-block;
-	color: grey;
-}
-
-#breadcrumb > *:after {
-	content: ' > ';
-}
-
-#breadcrumb > *:last-child:after
-{
-  content: '';
-}
-
-#breadcrumb > .active {
-	color: green;
-}
-
 /* layout > container */
 #container > * {
 	display: none;

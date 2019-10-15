@@ -140,9 +140,6 @@ smBkApp.buildProducts = function() {
 
 			var obj = {
 				id: parseInt(this.getAttribute('data-id'))
-				// price: parseFloat(this.getAttribute('data-price')),
-				// type: this.getAttribute('data-type'),
-				// qty: parseInt(this.getAttribute('data-qty'))
 			};
 
 			let className = this.className;
