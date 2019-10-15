@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SM Bike Rental</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+	<header id="header">
+		<a href="#" class="logo">SM <span class="meta">Bike Rental</span></a>
+	</header>
+
+<!-- 	<ul id="breadcrumb">
+		<li class="step-1 active">Bike Selection</li>
+		<li class="step-2">Review</li>
+		<li class="step-3">Checkout</li>
+	</ul> -->
+
+	<section id="container" class="loading">
+
+		<div class="loading">Loading ...</div>
+
+		<div class="step-1">
+			<div id="products">
+				
+			</div>
+			<button class="action-button next">Next</button>
+		</div>
+
+		<div class="step-2">
+			<div id="review">
+				
+			</div>
+
+			<div id="review-total">
+				
+			</div>
+
+			<button class="action-button next-review">Confirm</button>
+		</div>
+
+		<div class="step-3">
+			
+
+			<form action="" method="post" id="checkout-form">
+
+				<div id="review-total-2">
+					Total : $0.00
+				</div>
+
+				<br><hr><br>
+
+				<label for="name">Full Name :</label>
+				<input type="name" name="name" size="20" required> <br><br>
+
+				<label for="name">E-Mail:</label>
+				<input type="email" name="name" size="30" required>
+
+				<br><br><hr><br>
+
+				<label for="name">Address:</label>
+				<input type="name" name="name" required> <br><br>
+
+				<label for="name">City:</label>
+				<input type="name" name="name" required>
+
+				<br><br><hr><br>
+
+				<label for="name">CC#:</label>
+				<input type="name" name="name" required>
+
+				<label for="name">MM/YY:</label>
+				<input type="name" name="name" size="5" required>
+
+				<label for="name">CCV:</label>
+				<input type="name" name="name" size="2" required>
+
+				<input type="submit" class="action-button next-checkout" value="Checkout">
+
+			</form>
+
+		</div>
+
+		<div class="step-4" id="success">
+			<h1>Thank You For Your Purchase</h1>
+			<p>An e-mail has been dispatched with more details. We value your business.</p>
+		</div>
+
+	</section>
+
+
+
+	<!-- templates -->
+	<div class="review-item hidden">
+		<b>Name :</b> <span class="title">Bike</span> <br>
+		<b>Price (ea) :</b> <span class="price">$20.00</span> <br>
+		<b>Qty :</b> <span class="qty">2</span>
+	</div>
+
+
+	<div class="product hidden" data-title="" data-id="" data-price="" data-type="" data-qty="1">
+		<div class="selected"></div>
+
+		<h1 class="title">Adult Male Bike</h1>
+		<img class="thumb" src="http://via.placeholder.com/250x250?text=Adult%20Male%20Bike">
+		<h2 class="price">$20.50</h2>
+
+
+		<div class="qty-container">
+			Qty : <input type="number" name="" value="1" class="qty" min='1'>
+		</div>
+		
+	</div>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>

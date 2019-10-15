@@ -1,0 +1,164 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html,body {
+	font-family: arial;
+	font-size: 14px;
+}
+
+/* helpers */
+.hidden {
+	display: none;
+}
+
+.loading {
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+}
+
+.action-button {
+	display: block;
+	background: orange;
+	color: #f9f9f9;
+	padding: 10px 5px;
+	margin: 10px 0;
+	font-weight: bold;
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+/* layout > header */
+#header {
+	background: #333;
+	position: relative;
+}
+
+#header .logo {
+	color: #f9f9f9;
+	font-weight: 800;
+	font-size: 21px;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 10px 5px;
+}
+
+#header .logo:hover {
+	background: #222;
+}
+
+#header .logo .meta {
+	color: orange;
+}
+
+/*#header .total {
+	color: #f9f9f9;
+	font-weight: 800;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+*/
+
+/* layout > breadcrumb */
+#breadcrumb {
+	background: #eaeaea;
+	padding: 10px 5px;
+}
+
+#breadcrumb > * {
+	display: inline-block;
+	color: grey;
+}
+
+#breadcrumb > *:after {
+	content: ' > ';
+}
+
+#breadcrumb > *:last-child:after
+{
+  content: '';
+}
+
+#breadcrumb > .active {
+	color: green;
+}
+
+/* layout > container */
+#container > * {
+	display: none;
+	padding: 10px 5px;
+}
+
+#container.loading .loading,
+#container.step-1 .step-1,
+#container.step-2 .step-2,
+#container.step-3 .step-3,
+#container.step-4 .step-4 {
+	display: block;
+}
+
+/* partials > product */
+.product {
+	width: 250px;
+	height: 350px;
+	cursor: pointer;
+	position: relative;
+	float: left;
+	margin: 10px 5px;
+}
+
+
+.product:hover {
+	opacity: .8;
+}
+
+.product.selected .selected {
+	display: block;
+	background: red;
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	top: 24px;
+	z-index: 2;
+	opacity: .25;
+	background: url('https://png.pngtree.com/png-vector/20190228/ourmid/pngtree-check-mark-icon-design-template-vector-isolated-png-image_711433.jpg');
+	background-size: contain;
+}
+
+.product .qty-container {
+	display: none;
+}
+
+.product.selected .qty-container {
+	display: inline-block;
+}
+
+.product .title {
+	text-align: center;
+}
+.product .thumb {}
+.product .price {
+	text-align: center;
+}
+
+.product .qty {
+	background: #dadada;
+	width: 50px;
+	padding: 10px 5px;
+}
+
+
+/* partials > review item */
+.review-item {
+	float: left;
+	width: 100%;
+	border-bottom: 2px solid #333;
+	padding-bottom: 10px;
+	line-height: 20px;
+}
