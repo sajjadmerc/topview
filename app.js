@@ -1,17 +1,15 @@
 var smBkApp = {};
 
-smBkApp.containerEl = document.getElementById('container');
-smBkApp.productsContainerEl = document.getElementById('products');
-smBkApp.reviewContainerEl = document.getElementById('review');
 smBkApp.totalEl = document.querySelector('.total');
+smBkApp.containerEl = document.getElementById('container');
+smBkApp.reviewContainerEl = document.getElementById('review');
+smBkApp.productsContainerEl = document.getElementById('products');
 
-smBkApp.currentStep = 1;
 smBkApp.total = 0.00;
-
-smBkApp.products = [];
-smBkApp.stepsCompleted = [];
 smBkApp.bikeIds = [];
+smBkApp.products = [];
 smBkApp.itemsSelected = {};
+smBkApp.stepsCompleted = [];
 
 smBkApp.init = function() {
 	let _this = this;
