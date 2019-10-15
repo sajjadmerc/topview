@@ -51,7 +51,7 @@ smBkApp.loadStep = function(step_number) {
 			};
 			break;
 		case 3:
-			document.getElementById('review-total-2').innerHTML = 'Total : $' + this.total;
+			document.getElementById('review-total-2').innerHTML = 'Total : $' + this.total.toFixed(2);
 			document.getElementById('checkout-form').addEventListener("submit", function(evt) {
 		        evt.preventDefault();
 		        _this.loadStep(4);
