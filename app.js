@@ -85,7 +85,7 @@ smBkApp.buildReview = function() {
 
 		cln.querySelector('.title').innerHTML = obj.title;
 		cln.querySelector('.qty').innerHTML = obj.qty;
-		cln.querySelector('.price').innerHTML = '$' + (obj.price);
+		cln.querySelector('.price').innerHTML = '$' + (obj.price.toFixed(2));
 
 		cln.classList.remove('hidden');
 		this.reviewContainerEl.appendChild(cln);
@@ -107,7 +107,7 @@ smBkApp.buildProducts = function() {
 
 		cln.querySelector('.title').innerHTML = item.name;
 		cln.querySelector('.thumb').setAttribute('src', item.image);
-		cln.querySelector('.price').innerHTML = '$' + (item.price);
+		cln.querySelector('.price').innerHTML = '$' + (item.price.toFixed(2));
 
 		if(item.product_type == 'bike') {
 			_this.bikeIds.push(item.id);
