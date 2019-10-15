@@ -1,4 +1,4 @@
-var smBkApp = {};
+let smBkApp = {};
 
 smBkApp.totalEl = document.querySelector('.total');
 smBkApp.containerEl = document.getElementById('container');
@@ -23,14 +23,14 @@ smBkApp.init = function() {
 }
 
 smBkApp.loadStep = function(step_number) {
-	var _this = this;
+	let _this = this;
 	switch(step_number) {
 		case 1:
 			this.buildProducts();
 			document.querySelector('.next').onclick = function() {
 				let valid = false;
 
-				for (var key in _this.itemsSelected) {
+				for (let key in _this.itemsSelected) {
 					if(_this.bikeIds.includes(parseInt(key))) {
 						valid = true;
 					}
@@ -67,10 +67,10 @@ smBkApp.loadStep = function(step_number) {
 }
 
 smBkApp.buildReview = function() {
-	for (var key in this.itemsSelected) {
+	for (let key in this.itemsSelected) {
 		let _this = this.itemsSelected[key];
 		
-		var obj = {
+		let obj = {
 			id: parseInt(_this.getAttribute('data-id')),
 			title: (_this.getAttribute('data-title')),
 			price: parseFloat(_this.getAttribute('data-price')),
@@ -95,8 +95,8 @@ smBkApp.buildReview = function() {
 }
 
 smBkApp.buildProducts = function() {
-	var _this = this;
-	this.products.forEach(function(item, index) {
+	let _this = this;
+	this.products.forEach((item, index) => {
 		let productTemplate = document.querySelector('.product');
 		let cln = productTemplate.cloneNode(true);
 
@@ -123,7 +123,7 @@ smBkApp.buildProducts = function() {
 			let classNameClicked = e.target;
 			if(classNameClicked.className == 'qty') return;
 
-			var obj = {
+			let obj = {
 				id: parseInt(this.getAttribute('data-id'))
 			};
 
