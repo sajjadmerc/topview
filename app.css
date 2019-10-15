@@ -11,6 +11,14 @@ html,body {
 }
 
 /* helpers */
+.heading {
+	display: block;
+	clear: both;
+	border: 1px solid #dadada;
+	background: #f9f9f9;
+	color: orange;
+	padding: 10px 5px;
+}
 .hidden {
 	display: none;
 }

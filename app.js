@@ -4,6 +4,7 @@ smBkApp.totalEl = document.querySelector('.total');
 smBkApp.containerEl = document.getElementById('container');
 smBkApp.reviewContainerEl = document.getElementById('review');
 smBkApp.productsContainerEl = document.getElementById('products');
+smBkApp.productsOtherContainerEl = document.getElementById('products-other');
 
 smBkApp.total = 0.00;
 smBkApp.bikeIds = [];
@@ -139,7 +140,12 @@ smBkApp.buildProducts = function() {
 		}
 
 		cln.classList.remove('hidden');
-		_this.productsContainerEl.appendChild(cln);
+
+		if(item.product_type == "bike") {
+			_this.productsContainerEl.appendChild(cln);
+		} else {
+			_this.productsOtherContainerEl.appendChild(cln);
+		}
 
 	});
 }
