@@ -10,10 +10,8 @@ smBkApp.total = 0.00;
 
 smBkApp.products = [];
 smBkApp.stepsCompleted = [];
-
 smBkApp.bikeIds = [];
 smBkApp.itemsSelected = {};
-
 
 smBkApp.init = function() {
 	let _this = this;
@@ -72,7 +70,6 @@ smBkApp.loadStep = function(step_number) {
 
 	this.containerEl.className = "step-" + step_number;
 }
-
 
 smBkApp.buildReview = function() {
 
@@ -155,9 +152,6 @@ smBkApp.buildProducts = function() {
 	});
 }
 
-
-smBkApp.init();
-
 /* utilities */
 function loadJSON(path, success, error)
 {
@@ -177,3 +171,6 @@ function loadJSON(path, success, error)
     xhr.open("GET", path, true);
     xhr.send();
 }
+
+// initialization
+smBkApp.init();
