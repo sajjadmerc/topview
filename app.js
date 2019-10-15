@@ -87,8 +87,6 @@ smBkApp.buildReview = function() {
 			qty: parseInt(_this.getAttribute('data-qty'))
 		};
 
-		console.log(obj);
-
 		this.total += obj.price * obj.qty;
 
 		let productTemplate = document.querySelector('.review-item');
@@ -103,9 +101,6 @@ smBkApp.buildReview = function() {
 	}
 
 	document.getElementById('review-total').innerHTML = '<b>Total :</b> $' + this.total;
-	console.log(this.total);
-
-
 }
 
 smBkApp.buildProducts = function() {
