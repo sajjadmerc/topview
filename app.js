@@ -91,7 +91,7 @@ smBkApp.buildReview = function() {
 		this.reviewContainerEl.appendChild(cln);
 	}
 
-	document.getElementById('review-total').innerHTML = '<b>Total :</b> $' + this.total;
+	document.getElementById('review-total').innerHTML = '<b>Total :</b> $' + this.total.toFixed(2);
 }
 
 smBkApp.buildProducts = function() {
